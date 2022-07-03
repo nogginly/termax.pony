@@ -75,6 +75,18 @@ Build the mouse-handling example with `ponyc -o bin examples/mousing` and run `b
 
 ![Mousing example video](docs/images/termax.mousing.gif)
 
+### Using Corral
+
+The `using_corral` can be used to test using `termax` via corral. Run the following commands to build the example:
+
+```sh
+cd examples/using_corral
+corral fetch
+corral run -- ponyc -o bin
+```
+
+Now you can run `bin/using_corral` to try the app.
+
 ## Contributing
 
 Bug reports and sugestions are welcome. Otherwise, at this time, this project is closed for code changes and pull requests. I appreciate your understanding.

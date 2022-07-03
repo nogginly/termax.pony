@@ -1,0 +1,8 @@
+{
+  "locks": [
+    {
+      "locator": "github.com/nogginly/termax.pony.git",
+      "revision": "0.1.1"
+    }
+  ]
+}
