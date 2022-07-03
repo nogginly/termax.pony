@@ -1,0 +1,17 @@
+{
+  "packages": [],
+  "deps": [
+    {
+      "locator": "github.com/nogginly/termax.pony.git",
+      "version": ">=0.1.0"
+    }
+  ],
+  "info": {
+    "description": "Example using corral to fetch 'termax' as a dependency.",
+    "homepage": "",
+    "license": "",
+    "documentation_url": "",
+    "version": "",
+    "name": "termax_example_using_corral"
+  }
+}
