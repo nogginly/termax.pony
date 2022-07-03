@@ -1,0 +1,17 @@
+# nothing in tmp/
+tmp
+
+# exclude tmp files
+tmp.md
+
+# do not commit macOS cache files
+.DS_Store
+
+# Pony corral build artifacts
+_repos/
+_corral/
+build/
+
+# the compiled artifacts
+bin/
+*-docs/

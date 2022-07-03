@@ -1,0 +1,14 @@
+{
+  "packages": [
+    "termax"
+  ],
+  "deps": [],
+  "info": {
+    "description": "An enhanced derivative of `term` for building rich text-based apps with Pony",
+    "homepage": "https://github.com/nogginly/termax.pony",
+    "license": "BSD-2-Clause",
+    "documentation_url": "https://github.com/nogginly/termax.pony",
+    "version": "0.1.0",
+    "name": "termax"
+  }
+}
