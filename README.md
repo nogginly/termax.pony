@@ -46,7 +46,7 @@ In addition to the functionality provided by the standard library's `term` packa
 
 ### Simple
 
-Build the example with `pony examples/simple` and run `simple` to launch it.
+Build the example with `ponyc -o bin examples/simple` and run `bin/simple` to launch it.
 
 ```pony
 use "termax"
@@ -69,6 +69,11 @@ actor Main
   new create(env: Env) =>
     let term = EasyTerminal(env, _Listen(env))
 ```
+### Mousing
+
+Build the mouse-handling example with `ponyc -o bin examples/mousing` and run `bin/mousing` to launch it. The following shows the example in use.
+
+![Mousing example video](docs/images/termax.mousing.gif)
 
 ## Contributing
 
