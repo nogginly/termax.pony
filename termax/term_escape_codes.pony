@@ -347,6 +347,18 @@ trait TerminalEscapeCodes
     """
     "\e[?1003l\e[?1015l\e[?1006l"
 
+  fun reset_color(): String =>
+    """
+    Resets foreground colour (but not the text styles)
+    """
+    "\e[39m"
+
+  fun reset_color_bg(): String =>
+    """
+    Resets foreground colour (but not the text styles)
+    """
+    "\e[49m"
+
   fun color(fg: U8) : String =>
     """
     Select an 8-bit foreground (text) color. 
