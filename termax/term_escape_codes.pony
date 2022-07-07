@@ -345,7 +345,7 @@ trait TerminalEscapeCodes
     """
     Disable mouse input handling
     """
-    "\e[?1000l"
+    "\e[?1003l\e[?1015l\e[?1006l"
 
   fun color(fg: U8) : String =>
     """
