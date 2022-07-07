@@ -52,6 +52,31 @@ trait TerminalTextFormatting
     """
     Term.strikeout() +  value.string() + Term.strikeout(false)
 
+  fun color(value: Stringable val, fg: U8, bg: (None|U8) = None) : String =>
+    """
+    Return the value escaped by 8-bit colour codes for foreground and 
+    (optional) background colours.
+    """
+    match bg
+    | let bgcolor : U8 => 
+        Term.color(bgcolor) + Term.color(fg) + value.string() + 
+        Term.reset_color() + Term.reset_color_bg()
+    else
+        Term.color(fg) + value.string() + Term.reset_color()
+    end
+
+  fun color_with(value: Stringable val, fg: String, bg: (None|String) = None) : String =>
+    """
+    Return the value surrounded by supplied escape codes for foreground and 
+    (optional) background colours.
+    """
+    match bg
+    | let bgcode : String => 
+        bgcode + fg + value.string() + Term.reset_color() + Term.reset_color_bg()
+    else
+        fg + value.string() + Term.reset_color()
+    end
+
 primitive TermFmt is TerminalTextFormatting
   """
   Use this primitive directly to format strings. 
