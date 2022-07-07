@@ -97,11 +97,11 @@ actor Terminal
 
     // Catch and send Ctrl-C (3) and Ctrl-Z (26) as inputs
     if _options.catch_ctrl_C then
-      SignalHandler(recover _TermSigKeyNotify(this, 3) end, Sig.int())
+      SignalHandler(recover _TermSigKeyNotify(this, Key.ctrl_C()) end, Sig.int())
     end
     
     if _options.catch_ctrl_Z then
-      SignalHandler(recover _TermSigKeyNotify(this, 26) end, Sig.tstp())
+      SignalHandler(recover _TermSigKeyNotify(this, Key.ctrl_Z()) end, Sig.tstp())
     end
     
     _size()
