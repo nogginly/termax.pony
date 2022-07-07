@@ -105,6 +105,7 @@ class _Listen is (TerminalNotify & TerminalTextFormatting)
     write(
       Term.mouse_disable() +
       Term.switch_to_normal_screen())
+    write("Caught ^C - disabled mouse and switched to normal screen.\n")
 
 actor Main
   new create(env: Env) =>
