@@ -339,13 +339,13 @@ trait TerminalEscapeCodes
     """
     Enable mouse input events
     """
-    "\e[?1003h\e[?1015h\e[?1006h"
+    "\e[?1000h\e[?1002h\e[?1003h\e[?1015h\e[?1006h"
 
   fun mouse_disable() : String =>
     """
     Disable mouse input handling
     """
-    "\e[?1003l\e[?1015l\e[?1006l"
+    "\e[?1000l\e[?1002l\e[?1003l\e[?1015l\e[?1006l"
 
   fun reset_color(): String =>
     """
@@ -400,6 +400,19 @@ trait TerminalEscapeCodes
     Strike through text. May not work on Windows.
     """
     if state then "\e[9m" else "\e[29m" end
+
+  fun repeat_char(char : String val, times: U32) : String val =>
+    match times
+    | 0 => ""
+    | 1 => char
+    else
+      let str = String(10)
+      str.>append(char)
+        .>append("\e[")
+        .>append((times-1).string())
+        .>append("b")
+      str.string()
+    end
 
 primitive Term is TerminalEscapeCodes
   """
