@@ -77,7 +77,7 @@ trait TerminalTextFormatting
         fg + value.string() + Term.reset_color()
     end
 
-primitive TermFmt is TerminalTextFormatting
+primitive TermText is TerminalTextFormatting
   """
   Use this primitive directly to format strings. 
   """

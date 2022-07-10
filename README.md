@@ -1,21 +1,28 @@
 # Termax for Pony
 
-> Not ready for production yet. Expect API changes for a little while. 
+> Not ready for production yet. Expect API changes for a little while.
 
 The `termax` package provides support for building text-based user interfaces for terminals. This package is based on the standard library's `term` package, offering backward compatibilti while adding functionality to help build richer text-based UIs.
 
 ## Core API
 
-| Object                                     | Type        | Summary                                                                       |
-| ------------------------------------------ | ----------- | ----------------------------------------------------------------------------- |
-| `Terminal`                                 | actor       | Sets up an interactive terminal and sends input events via `TerminalNotify`   |
-| &nbsp;&nbsp;&nbsp;&nbsp;`+-- EasyTerminal` | primitive   | Use to create a pre-configured Terminal that uses standard input.             |
-| `TerminalEscapeCodes`                      | *trait*     | Defines functions that return the ANSI and other terminal escape codes        |
-| &nbsp;&nbsp;&nbsp;&nbsp;`+-- Term`         | primitive   | Use to get escape codes                                                       |
-| `TerminalNotify`                           | *interface* | Implement this when setting up input handling                                 |
-| `TermOptions`                              | class       | Create an instance to configure `Terminal` if you want to change the defaults |
-| `TerminalTextFormatting`                   | *trait*     | Defines convenient text formatting functions                                  |
-| &nbsp;&nbsp;&nbsp;&nbsp;`+-- TermFmt`      | primitive   | Use to format text                                                            |
+| Object                             | Type        | Summary                                                                       |
+| ---------------------------------- | ----------- | ----------------------------------------------------------------------------- |
+| `TerminalNotify`                   | *interface* | Implement this when setting up input handling                                 |
+| `TermOptions`                      | class       | Create an instance to configure `Terminal` if you want to change the defaults |
+| `Terminal`                         | actor       | Sets up an interactive terminal and sends input events via `TerminalNotify`   |
+| &nbsp;&nbsp;`└── EasyTerminal`     | primitive   | Use to create a pre-configured Terminal that uses standard input.             |
+| *`TerminalEscapeCodes`*            | *trait*     | Defines functions that return the ANSI and other terminal escape codes        |
+| &nbsp;&nbsp;`└── Term`             | primitive   | Use to get escape codes                                                       |
+| *`TerminalTextFormatting`*         | *trait*     | Defines convenient text formatting functions                                  |
+| &nbsp;&nbsp;`└── TermText`         | primitive   | Use to format text                                                            |
+| *`TerminalDrawing`*                | *trait*     | Defines convenient text formatting functions                                  |
+| &nbsp;&nbsp;`└── TermDraw`         | primitive   | Use to format text                                                            |
+| *`GridChars`*                      | *trait*     | Defines line style characters used when drawing box/grids                     |
+| &nbsp;&nbsp;`└── SingleSolidLine`  | primitive   | Single solid line style                                                       |
+| &nbsp;&nbsp;`└── SingleDashedLine` | primitive   | Single dashed line style                                                      |
+| &nbsp;&nbsp;`└── DoubleSolidLine`  | primitive   | Double solid line style                                                       |
+| `FillPattern`                      | primitive   | Convenient list of characters that are useful as fill patterns.               |
 
 ## Compatibility
 
@@ -54,7 +61,7 @@ use "termax"
 class _Listen is TerminalNotify
   let _out: OutStream
 
-  new iso create(env': Env) => 
+  new iso create(env': Env) =>
     _out = env'.out
     _out.print("Press Ctrl-C to exit.\nType away ...")
 
@@ -74,6 +81,12 @@ actor Main
 Build the mouse-handling example with `ponyc -o bin examples/mousing` and run `bin/mousing` to launch it. The following shows the example in use.
 
 ![Mousing example video](docs/images/termax.mousing.gif)
+
+### Drawing
+
+Build the drawing example with `ponyc -o bin examples/drawing` and run `bin/drawing` to launch it. The following shows the example in use.
+
+![Drawing example screenshot](docs/images/termax.drawing.png)
 
 ### Using Corral
 
@@ -104,3 +117,4 @@ The library is available as open source under the terms of the [BSD-2 License](L
 3. Everything you never wanted to know about ANSI escape codes - https://notes.burke.libbey.me/ansi-escape-codes/
 4. Turn on raw mode in terminal using <termios.h> - https://viewsourcecode.org/snaptoken/kilo/02.enteringRawMode.html
 5. XTerm Control Sequences - https://invisible-island.net/xterm/ctlseqs/ctlseqs.html
+6. Complete list of ASCII codes - https://theasciicode.com.ar/ascii-codes.txt
