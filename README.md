@@ -4,7 +4,11 @@
 
 The `termax` package provides support for building text-based user interfaces for terminals. This package is based on the standard library's `term` package, offering backward compatibilti while adding functionality to help build richer text-based UIs.
 
-## Core API
+## API Documentation'
+
+https://nogginly.github.io/termax.pony/
+
+### Core API Overview
 
 | Object                             | Type        | Summary                                                                       |
 | ---------------------------------- | ----------- | ----------------------------------------------------------------------------- |
