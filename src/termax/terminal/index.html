@@ -1,0 +1,1207 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://nogginly.github.io/termax.pony/src/termax/terminal/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-ponylang-0.2.8">
+    
+    
+      
+        <title>Terminal - termax</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.b80b25f7.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.0b5df86e.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <a href="https://nogginly.github.io/termax.pony/" title="termax" class="md-header-nav__button md-logo">
+          
+            <img src="../../../assets/images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                termax
+              </span>
+              <span class="md-header-nav__topic">
+                Terminal
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../../assets/images/logo.png" width="48" height="48">
+      
+    </span>
+    termax
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="termax" class="md-nav__link">
+      termax
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      package termax
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        package termax
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax--index/" title="Package" class="md-nav__link">
+      Package
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-TerminalNotify/" title="interface TerminalNotify" class="md-nav__link">
+      interface TerminalNotify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-Terminal/" title="actor Terminal" class="md-nav__link">
+      actor Terminal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-TerminalTextFormatting/" title="trait TerminalTextFormatting" class="md-nav__link">
+      trait TerminalTextFormatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-TermText/" title="primitive TermText" class="md-nav__link">
+      primitive TermText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-TermOptions/" title="class TermOptions" class="md-nav__link">
+      class TermOptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-TerminalEscapeCodes/" title="trait TerminalEscapeCodes" class="md-nav__link">
+      trait TerminalEscapeCodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-Term/" title="primitive Term" class="md-nav__link">
+      primitive Term
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-GridChars/" title="trait GridChars" class="md-nav__link">
+      trait GridChars
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-SingleSolidLine/" title="primitive SingleSolidLine" class="md-nav__link">
+      primitive SingleSolidLine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-SingleDashedLine/" title="primitive SingleDashedLine" class="md-nav__link">
+      primitive SingleDashedLine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-DoubleSolidLine/" title="primitive DoubleSolidLine" class="md-nav__link">
+      primitive DoubleSolidLine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-FillPattern/" title="primitive FillPattern" class="md-nav__link">
+      primitive FillPattern
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-TerminalDrawing/" title="trait TerminalDrawing" class="md-nav__link">
+      trait TerminalDrawing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-TermDraw/" title="primitive TermDraw" class="md-nav__link">
+      primitive TermDraw
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-LeftMouseButton/" title="primitive LeftMouseButton" class="md-nav__link">
+      primitive LeftMouseButton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-MiddleMouseButton/" title="primitive MiddleMouseButton" class="md-nav__link">
+      primitive MiddleMouseButton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-RightMouseButton/" title="primitive RightMouseButton" class="md-nav__link">
+      primitive RightMouseButton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-UnknownMouseButton/" title="primitive UnknownMouseButton" class="md-nav__link">
+      primitive UnknownMouseButton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-KnownMouseButton/" title="type KnownMouseButton" class="md-nav__link">
+      type KnownMouseButton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-MouseButton/" title="type MouseButton" class="md-nav__link">
+      type MouseButton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-ScrollUp/" title="primitive ScrollUp" class="md-nav__link">
+      primitive ScrollUp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-ScrollDown/" title="primitive ScrollDown" class="md-nav__link">
+      primitive ScrollDown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-ScrollDirection/" title="type ScrollDirection" class="md-nav__link">
+      type ScrollDirection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-Key/" title="primitive Key" class="md-nav__link">
+      primitive Key
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-EraseBefore/" title="primitive EraseBefore" class="md-nav__link">
+      primitive EraseBefore
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-EraseAfter/" title="primitive EraseAfter" class="md-nav__link">
+      primitive EraseAfter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-EraseAll/" title="primitive EraseAll" class="md-nav__link">
+      primitive EraseAll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-EraseLine/" title="type EraseLine" class="md-nav__link">
+      type EraseLine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-EraseDisplay/" title="type EraseDisplay" class="md-nav__link">
+      type EraseDisplay
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-EasyTerminal/" title="primitive EasyTerminal" class="md-nav__link">
+      primitive EasyTerminal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-ANSI/" title="primitive ANSI" class="md-nav__link">
+      primitive ANSI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-ANSITerm/" title="type ANSITerm" class="md-nav__link">
+      type ANSITerm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../termax-ANSINotify/" title="interface ANSINotify" class="md-nav__link">
+      interface ANSINotify
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Terminal</h1>
+                
+                <pre><code class="language-pony-full-source">use &quot;time&quot;
+use &quot;signals&quot;
+
+use @ioctl[I32](fx: I32, cmd: ULong, ...) if posix
+
+struct _TermSize
+  var row: U16 = 0
+  var col: U16 = 0
+  var xpixel: U16 = 0
+  var ypixel: U16 = 0
+
+primitive _EscapeNone
+primitive _EscapeStart
+primitive _EscapeSS3
+primitive _EscapeCSI
+primitive _EscapeMod
+primitive _EscapeMouseStart
+primitive _EscapeMouseX
+primitive _EscapeMouseY
+
+type _EscapeState is
+  ( _EscapeNone
+  | _EscapeStart
+  | _EscapeSS3
+  | _EscapeCSI
+  | _EscapeMod
+  | _EscapeMouseStart
+  | _EscapeMouseX
+  | _EscapeMouseY
+  )
+
+class _TermResizeNotify is SignalNotify
+  let _term: Terminal tag
+
+  new create(term: Terminal tag) =&gt;
+    _term = term
+
+  fun apply(times: U32): Bool =&gt;
+    _term.size()
+    true
+
+class _TermSigKeyNotify is SignalNotify
+  let _term: Terminal tag
+  let _input: U8 val
+
+  new create(term: Terminal tag, input: U8 val) =&gt;
+    _term = term
+    _input = input
+
+  fun apply(times: U32): Bool =&gt;
+    _term.input(_input)
+    true
+
+primitive _TIOCGWINSZ
+  fun apply(): ULong =&gt;
+    ifdef linux then
+      21523
+    elseif osx or bsd then
+      1074295912
+    else
+      0
+    end
+
+actor Terminal
+  &quot;&quot;&quot;
+  Handles terminal escape codes from stdin.
+  &quot;&quot;&quot;
+  let _options: TermOptions val
+  let _timers: Timers
+  var _timer: (Timer tag | None) = None
+  let _notify: TerminalNotify
+  let _source: DisposableActor
+  var _escape: _EscapeState = _EscapeNone
+  var _esc_num: U8 = 0
+  var _esc_mod: U8 = 0
+  var _esc_mouse_x: U32 = 0
+  var _esc_mouse_y: U32 = 0
+  embed _esc_buf: Array[U8] = Array[U8]
+  var _closed: Bool = false
+
+  new create(
+    notify: TerminalNotify iso,
+    source: DisposableActor,
+    timers: Timers = Timers,
+    options: TermOptions val = TermOptions) =&gt;
+    &quot;&quot;&quot;
+    Create a new ANSI term.
+    &quot;&quot;&quot;
+    _timers = timers
+    _notify = consume notify
+    _source = source
+    _options = options
+
+    ifdef not windows then
+      SignalHandler(recover _TermResizeNotify(this) end, Sig.winch())
+    end
+
+    // Catch and send Ctrl-C (3) and Ctrl-Z (26) as inputs
+    if _options.catch_ctrl_C then
+      SignalHandler(recover _TermSigKeyNotify(this, Key.ctrl_C()) end, Sig.int())
+    end
+
+    if _options.catch_ctrl_Z then
+      SignalHandler(recover _TermSigKeyNotify(this, Key.ctrl_Z()) end, Sig.tstp())
+    end
+
+    _size()
+
+  be apply(data: Array[U8] iso) =&gt;
+    &quot;&quot;&quot;
+    Receives input from stdin.
+    &quot;&quot;&quot;
+    if _closed then
+      return
+    end
+
+    for c in (consume data).values() do
+      match _escape
+      | _EscapeNone =&gt;
+        if c == 0x1B then
+          _escape = _EscapeStart
+          _esc_buf.push(0x1B)
+        else
+          _notify(this, c)
+        end
+      | _EscapeStart =&gt; _in_escape_start(c)
+      | _EscapeSS3 =&gt; _in_escape_SS3(c)
+      | _EscapeCSI =&gt; _in_escape_CSI(c)
+      | _EscapeMod =&gt; _in_escape_modifier(c)
+      | _EscapeMouseStart =&gt; _in_escape_mouse_start(c)
+      | _EscapeMouseX =&gt; _in_escape_mouse_X(c)
+      | _EscapeMouseY =&gt; _in_escape_mouse_Y(c)
+      end
+    end
+
+    // If we are in the middle of an escape sequence, set a timer for 25 ms.
+    // If it fires, we send the escape sequence as if it was normal data.
+    if _escape isnt _EscapeNone then
+      if _timer isnt None then
+        try _timers.cancel(_timer as Timer tag) end
+      end
+
+      let t = recover
+        object is TimerNotify
+          let term: Terminal = this
+
+          fun ref apply(timer: Timer, count: U64): Bool =&gt;
+            term._timeout()
+            false
+        end
+      end
+
+      let timer = Timer(consume t, 25000000)
+      _timer = timer
+      _timers(consume timer)
+    end
+
+  fun ref _in_escape_start(c: U8) =&gt;
+    match c
+    | 'b' =&gt; // alt-left
+      _esc_mod = 3
+      _left()
+    | 'f' =&gt; // alt-right
+      _esc_mod = 3
+      _right()
+    | 'O' =&gt;
+      _escape = _EscapeSS3
+      _esc_buf.push(c)
+    | '[' =&gt;
+      _escape = _EscapeCSI
+      _esc_buf.push(c)
+    else
+      _esc_flush()
+    end
+
+  fun ref _in_escape_SS3(c: U8) =&gt;
+    match c
+    | 'A' =&gt; _up()
+    | 'B' =&gt; _down()
+    | 'C' =&gt; _right()
+    | 'D' =&gt; _left()
+    | 'H' =&gt; _home()
+    | 'F' =&gt; _end()
+    | 'P' =&gt; _fn_key(1)
+    | 'Q' =&gt; _fn_key(2)
+    | 'R' =&gt; _fn_key(3)
+    | 'S' =&gt; _fn_key(4)
+    else
+      _esc_flush()
+    end
+
+  fun ref _in_escape_CSI(c: U8) =&gt;
+    match c
+    | 'A' =&gt; _up()
+    | 'B' =&gt; _down()
+    | 'C' =&gt; _right()
+    | 'D' =&gt; _left()
+    | 'H' =&gt; _home()
+    | 'F' =&gt; _end()
+    | '~' =&gt; _keypad()
+    | '&lt;' =&gt; 
+      _escape = _EscapeMouseStart
+    | ';' =&gt;
+      _escape = _EscapeMod
+    | if (c &gt;= '0') and (c &lt;= '9') =&gt;
+      // Escape number.
+      _esc_num = (_esc_num * 10) + (c - '0')
+      _esc_buf.push(c)
+    else
+      _esc_flush()
+    end
+
+  fun ref _in_escape_modifier(c: U8) =&gt;
+    match c
+    | 'A' =&gt; _up()
+    | 'B' =&gt; _down()
+    | 'C' =&gt; _right()
+    | 'D' =&gt; _left()
+    | 'H' =&gt; _home()
+    | 'F' =&gt; _end()
+    | '~' =&gt; _keypad()
+    | if (c &gt;= '0') and (c &lt;= '9') =&gt;
+      // Escape modifier.
+      _esc_mod = (_esc_mod * 10) + (c - '0')
+      _esc_buf.push(c)
+    else
+      _esc_flush()
+    end
+
+  fun ref _in_escape_mouse_start(c: U8) =&gt;
+    match c
+    | ';' =&gt;
+      _escape = _EscapeMouseX
+    | if (c &gt;= '0') and (c &lt;= '9') =&gt;
+      // Escape number.
+      _esc_num = (_esc_num * 10) + (c - '0')
+      _esc_buf.push(c)
+    else
+      _esc_flush()
+    end
+
+  fun ref _in_escape_mouse_X(c: U8) =&gt;
+    match c
+    | ';' =&gt;
+      _escape = _EscapeMouseY
+    | if (c &gt;= '0') and (c &lt;= '9') =&gt;
+      // mouse x coordinate
+      _esc_mouse_x = (_esc_mouse_x * 10) + (c - '0').u32()
+      _esc_buf.push(c)
+    else
+      _esc_flush()
+    end
+
+  fun ref _in_escape_mouse_Y(c: U8) =&gt;
+    match c
+    | 'M' =&gt;
+      match (_esc_num and 0b11100000)
+      | 0 =&gt; _mouse_press()
+      | 32 =&gt; if (_esc_num and 0b11) == 0b11 then _mouse_move() else _mouse_drag() end
+      | 64 =&gt; _mouse_wheel(where dir=(_esc_num and 1))
+      else 
+        _esc_flush()
+      end
+    | 'm' =&gt;
+      if (_esc_num and 0b11100000) == 0 then
+        _mouse_release()
+      else 
+        _esc_flush()
+      end
+    | if (c &gt;= '0') and (c &lt;= '9') =&gt;
+      // mouse y coordinate
+      _esc_mouse_y = (_esc_mouse_y * 10) + (c - '0').u32()
+      _esc_buf.push(c)
+    else
+      _esc_flush()
+    end
+
+  be prompt(value: String) =&gt;
+    &quot;&quot;&quot;
+    Pass a prompt along to the notifier.
+    &quot;&quot;&quot;
+    _notify.prompt(this, value)
+
+  be size() =&gt;
+    _size()
+
+  be input(input': U8 val) =&gt;
+    &quot;&quot;&quot;
+    Pass the provided input to the notifier.
+    &quot;&quot;&quot;
+    _notify(this, input')
+
+  fun ref _size() =&gt;
+    &quot;&quot;&quot;
+    Pass the window size to the notifier.
+    &quot;&quot;&quot;
+    let ws: _TermSize = _TermSize
+    ifdef posix then
+      @ioctl(0, _TIOCGWINSZ(), ws) // do error handling
+      _notify.size(ws.row, ws.col)
+    end
+
+  be dispose() =&gt;
+    &quot;&quot;&quot;
+    Stop accepting input, inform the notifier we have closed, and dispose of
+    our source.
+    &quot;&quot;&quot;
+    if not _closed then
+      _esc_clear()
+      _notify.closed()
+      _source.dispose()
+      _closed = true
+    end
+
+  be _timeout() =&gt;
+    &quot;&quot;&quot;
+    Our timer since receiving an ESC has expired. Send the buffered data as if
+    it was not an escape sequence.
+    &quot;&quot;&quot;
+    _timer = None
+    _esc_flush()
+
+  fun ref _mouse_button() : MouseButton =&gt;
+    match (_esc_num and 0b00000011)
+    | 0b00 =&gt; LeftMouseButton
+    | 0b01 =&gt; MiddleMouseButton
+    | 0b10 =&gt; RightMouseButton
+    else
+      UnknownMouseButton
+    end
+
+  fun ref _mouse_wheel(dir: U8) =&gt;
+    (let ctrl, let alt, let shift) = _mouse_kbd_mod()
+    _notify.mouse_wheel(
+      if dir == 0 then ScrollDown else ScrollUp end, 
+      ctrl, alt, shift, _esc_mouse_x, _esc_mouse_y)
+    _esc_clear()
+
+  fun ref _mouse_drag() =&gt;
+    (let ctrl, let alt, let shift) = _mouse_kbd_mod()
+    _notify.mouse_drag(_mouse_button(), ctrl, alt, shift, _esc_mouse_x, _esc_mouse_y)
+    _esc_clear()
+
+  fun ref _mouse_move() =&gt;
+    (let ctrl, let alt, let shift) = _mouse_kbd_mod()
+    _notify.mouse_move(ctrl, alt, shift, _esc_mouse_x, _esc_mouse_y)
+    _esc_clear()
+
+  fun ref _mouse_release() =&gt;
+    (let ctrl, let alt, let shift) = _mouse_kbd_mod()
+    _notify.mouse_release(_mouse_button(), ctrl, alt, shift, _esc_mouse_x, _esc_mouse_y)
+    _esc_clear()
+
+  fun ref _mouse_press() =&gt;
+    (let ctrl, let alt, let shift) = _mouse_kbd_mod()
+    _notify.mouse_press(_mouse_button(), ctrl, alt, shift, _esc_mouse_x, _esc_mouse_y)
+    _esc_clear()
+
+  fun ref _mouse_kbd_mod(): (Bool, Bool, Bool) =&gt;
+    /*
+     * Map the modifier bits in the mouse input code (_esc_num) to
+     * a tuple of modifier booleans
+     */
+    match (_esc_num and 0b00011100)
+                 //  ctrl   alt    shift
+    | 0b00000100 =&gt; (false, false, true)
+    | 0b00001000 =&gt; (false, true,  false)
+    | 0b00010000 =&gt; (true,  false, false)
+    | 0b00001100 =&gt; (false, true,  true)
+    | 0b00010100 =&gt; (true,  false, true)
+    | 0b00011000 =&gt; (true,  true,  false)
+    | 0b00011100 =&gt; (true,  true,  true)
+    else (false, false, false)
+    end
+
+  fun ref _mod(): (Bool, Bool, Bool) =&gt;
+    &quot;&quot;&quot;
+    Set the modifier bools.
+    &quot;&quot;&quot;
+    let r = match _esc_mod
+    | 2 =&gt; (false, false, true)
+    | 3 =&gt; (false, true, false)
+    | 4 =&gt; (false, true, true)
+    | 5 =&gt; (true, false, false)
+    | 6 =&gt; (true, false, true)
+    | 7 =&gt; (true, true, false)
+    | 8 =&gt; (true, true, true)
+    else (false, false, false)
+    end
+
+    _esc_mod = 0
+    r
+
+  fun ref _keypad() =&gt;
+    &quot;&quot;&quot;
+    An extended key.
+    &quot;&quot;&quot;
+    match _esc_num
+    | 1 =&gt; _home()
+    | 2 =&gt; _insert()
+    | 3 =&gt; _delete()
+    | 4 =&gt; _end()
+    | 5 =&gt; _page_up()
+    | 6 =&gt; _page_down()
+    | 11 =&gt; _fn_key(1)
+    | 12 =&gt; _fn_key(2)
+    | 13 =&gt; _fn_key(3)
+    | 14 =&gt; _fn_key(4)
+    | 15 =&gt; _fn_key(5)
+    | 17 =&gt; _fn_key(6)
+    | 18 =&gt; _fn_key(7)
+    | 19 =&gt; _fn_key(8)
+    | 20 =&gt; _fn_key(9)
+    | 21 =&gt; _fn_key(10)
+    | 23 =&gt; _fn_key(11)
+    | 24 =&gt; _fn_key(12)
+    | 25 =&gt; _fn_key(13)
+    | 26 =&gt; _fn_key(14)
+    | 28 =&gt; _fn_key(15)
+    | 29 =&gt; _fn_key(16)
+    | 31 =&gt; _fn_key(17)
+    | 32 =&gt; _fn_key(18)
+    | 33 =&gt; _fn_key(19)
+    | 34 =&gt; _fn_key(20)
+    end
+
+  fun ref _up() =&gt;
+    &quot;&quot;&quot;
+    Up arrow.
+    &quot;&quot;&quot;
+    (let ctrl, let alt, let shift) = _mod()
+    _notify.up(ctrl, alt, shift)
+    _esc_clear()
+
+  fun ref _down() =&gt;
+    &quot;&quot;&quot;
+    Down arrow.
+    &quot;&quot;&quot;
+    (let ctrl, let alt, let shift) = _mod()
+    _notify.down(ctrl, alt, shift)
+    _esc_clear()
+
+  fun ref _left() =&gt;
+    &quot;&quot;&quot;
+    Left arrow.
+    &quot;&quot;&quot;
+    (let ctrl, let alt, let shift) = _mod()
+    _notify.left(ctrl, alt, shift)
+    _esc_clear()
+
+  fun ref _right() =&gt;
+    &quot;&quot;&quot;
+    Right arrow.
+    &quot;&quot;&quot;
+    (let ctrl, let alt, let shift) = _mod()
+    _notify.right(ctrl, alt, shift)
+    _esc_clear()
+
+  fun ref _delete() =&gt;
+    &quot;&quot;&quot;
+    Delete key.
+    &quot;&quot;&quot;
+    (let ctrl, let alt, let shift) = _mod()
+    _notify.delete(ctrl, alt, shift)
+    _esc_clear()
+
+  fun ref _insert() =&gt;
+    &quot;&quot;&quot;
+    Insert key.
+    &quot;&quot;&quot;
+    (let ctrl, let alt, let shift) = _mod()
+    _notify.insert(ctrl, alt, shift)
+    _esc_clear()
+
+  fun ref _home() =&gt;
+    &quot;&quot;&quot;
+    Home key.
+    &quot;&quot;&quot;
+    (let ctrl, let alt, let shift) = _mod()
+    _notify.home(ctrl, alt, shift)
+    _esc_clear()
+
+  fun ref _end() =&gt;
+    &quot;&quot;&quot;
+    End key.
+    &quot;&quot;&quot;
+    (let ctrl, let alt, let shift) = _mod()
+    _notify.end_key(ctrl, alt, shift)
+    _esc_clear()
+
+  fun ref _page_up() =&gt;
+    &quot;&quot;&quot;
+    Page up key.
+    &quot;&quot;&quot;
+    (let ctrl, let alt, let shift) = _mod()
+    _notify.page_up(ctrl, alt, shift)
+    _esc_clear()
+
+  fun ref _page_down() =&gt;
+    &quot;&quot;&quot;
+    Page down key.
+    &quot;&quot;&quot;
+    (let ctrl, let alt, let shift) = _mod()
+    _notify.page_down(ctrl, alt, shift)
+    _esc_clear()
+
+  fun ref _fn_key(i: U8) =&gt;
+    &quot;&quot;&quot;
+    Function key.
+    &quot;&quot;&quot;
+    (let ctrl, let alt, let shift) = _mod()
+    _notify.fn_key(i, ctrl, alt, shift)
+    _esc_clear()
+
+  fun ref _esc_flush() =&gt;
+    &quot;&quot;&quot;
+    Pass a partial or unrecognised escape sequence to the notifier.
+    &quot;&quot;&quot;
+    for c in _esc_buf.values() do
+      _notify(this, c)
+    end
+
+    _esc_clear()
+
+  fun ref _esc_clear() =&gt;
+    &quot;&quot;&quot;
+    Clear the escape state.
+    &quot;&quot;&quot;
+    if _timer isnt None then
+      try _timers.cancel(_timer as Timer tag) end
+      _timer = None
+    end
+    _escape = _EscapeNone
+    _esc_buf.clear()
+    _esc_num = 0
+    _esc_mod = 0
+    _esc_mouse_x = 0
+    _esc_mouse_y = 0
+
+
+</code></pre>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+    <script src="../../../assets/javascripts/application.cb37bb38.js"></script>
+      
+      <script>app.initialize({version:"1.3.0",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
