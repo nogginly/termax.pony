@@ -8,8 +8,6 @@ jobs:
     name: Generate documentation for release
     runs-on: ubuntu-latest
     steps:
-      - name: work around permission issue
-        run: git config --global --add safe.directory /github/workspace
       - uses: actions/checkout@v2
       - name: Generate documentation and upload
         uses: docker://ponylang/library-documentation-action:release
